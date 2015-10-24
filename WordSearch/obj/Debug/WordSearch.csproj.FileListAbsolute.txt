@@ -1,0 +1,5 @@
+C:\Users\feliperc\OneDrive\Public\Way2\WordSearch\WordSearch\bin\Debug\WordSearch.exe
+C:\Users\feliperc\OneDrive\Public\Way2\WordSearch\WordSearch\bin\Debug\WordSearch.pdb
+C:\Users\feliperc\OneDrive\Public\Way2\WordSearch\WordSearch\obj\Debug\WordSearch.csprojResolveAssemblyReference.cache
+C:\Users\feliperc\OneDrive\Public\Way2\WordSearch\WordSearch\obj\Debug\WordSearch.exe
+C:\Users\feliperc\OneDrive\Public\Way2\WordSearch\WordSearch\obj\Debug\WordSearch.pdb
