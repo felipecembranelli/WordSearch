@@ -14,7 +14,7 @@ namespace WordSearch
             this.LoadDictionary();
         }
 
-        public void LoadDictionary()
+        private void LoadDictionary()
         {
             try
             {

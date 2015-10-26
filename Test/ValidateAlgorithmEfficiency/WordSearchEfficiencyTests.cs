@@ -12,7 +12,7 @@ namespace Test
         static IDictionary dictRepository = new DictionaryRepositoryFake();
 
         [TestMethod()]
-        public void SearchLowIndexWordTests()
+        public void ComparteAlgorithms_SearchLowestWord()
         {
             // arrange
             string word = "a";
@@ -31,7 +31,7 @@ namespace Test
         }
 
         [TestMethod()]
-        public void SearchUpperIndexWordTests()
+        public void ComparteAlgorithms_SearchHighestWord()
         {
             // arrange
             string word = "matter";
@@ -50,7 +50,7 @@ namespace Test
         }
 
         [TestMethod()]
-        public void SearchMiddleIndexWordTests()
+        public void ComparteAlgorithms_SearchMiddleWord()
         {
             // arrange
             string word = "exercise";

@@ -54,9 +54,9 @@
   </Choose>
   <ItemGroup>
     <Compile Include="FakeRepository\DictionaryRepositoryFake.cs" />
-    <Compile Include="ValidateAlgorithmPerformance\WordFullScanSearchService.cs" />
+    <Compile Include="ValidateAlgorithmEfficiency\WordFullScanSearchService.cs" />
     <Compile Include="UnitTests\WordSearchServiceTests.cs" />
-    <Compile Include="ValidateAlgorithmPerformance\WordSearchEfficiencyTests.cs" />
+    <Compile Include="ValidateAlgorithmEfficiency\WordSearchEfficiencyTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
