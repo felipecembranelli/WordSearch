@@ -12,18 +12,26 @@ namespace WordSearch
         
         static void Main(string[] args)
         {
-            
-            while (true)
+            try
             {
-                Console.Write("Informe uma palavra :");
+                while (true)
+                {
+                    Console.Write("Informe uma palavra :");
 
-                var word = Console.ReadLine();
+                    var word = Console.ReadLine();
 
-                if (word == string.Empty)
-                    continue;
+                    if (word == string.Empty)
+                        continue;
 
-                ProcessWord(word);
+                    ProcessWord(word);
+                }
             }
+            catch (Exception ex)
+            {
+                Console.Write("Ocorreu um erro executando a busca :" + ex.Message);
+                Console.ReadLine();
+            }
+            
         }
 
         /// <summary>

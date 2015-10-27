@@ -20,9 +20,12 @@ namespace WordSearch
                 return CallRestService(url);
 
             }
-            catch
+            catch (WebException ex)
             {
-                return null;
+                if (ex.Status == WebExceptionStatus.ProtocolError)
+                    return null;
+                else
+                    throw ex;
             }
         }
 
@@ -32,10 +35,15 @@ namespace WordSearch
             webrequest.Method = "GET";
             HttpWebResponse webresponse = (HttpWebResponse)webrequest.GetResponse();
 
+            if (webresponse.StatusCode == HttpStatusCode.NotFound)
+            {
+                throw new WebException("Word not found", null, WebExceptionStatus.ProtocolError, webresponse);
+            }
+
             Encoding enc = System.Text.Encoding.GetEncoding("utf-8");
 
             StreamReader responseStream = new StreamReader(webresponse.GetResponseStream(), enc);
-
+            
             string result = string.Empty;
 
             result = responseStream.ReadToEnd();
