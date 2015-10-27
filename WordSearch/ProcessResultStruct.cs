@@ -12,5 +12,6 @@ namespace WordSearch
     {
         public int deadCats;
         public long index;
+        public bool found;
     }
 }

@@ -36,7 +36,7 @@ namespace WordSearch
 
             ProcessResult processResult = service.SearchWord(word);
 
-            FormatOutput(word, processResult.index, processResult.deadCats);
+            FormatOutput(word, processResult);
         }
 
         /// <summary>
@@ -45,15 +45,15 @@ namespace WordSearch
         /// <param name="word"></param>
         /// <param name="pos"></param>
         /// <param name="deadCats"></param>
-        private static void FormatOutput(string word, long pos, int deadCats)
+        private static void FormatOutput(string word, ProcessResult result)
         {
-            if (pos == -1)
+            if (!result.found)
             {
-                Console.WriteLine(String.Format("Palavra não encontrada. Gatos mortos = {2}", word, pos.ToString(), deadCats.ToString()));
+                Console.WriteLine(String.Format("Palavra não encontrada. Gatos mortos = {2}", word, result.index.ToString(), result.deadCats.ToString()));
             }
             else
             {
-                Console.WriteLine(String.Format("Palavra '{0}' encontrada na posição {1}. Gatos mortos = {2}", word, pos.ToString(), deadCats.ToString()));
+                Console.WriteLine(String.Format("Palavra '{0}' encontrada na posição {1}. Gatos mortos = {2}", word, result.index.ToString(), result.deadCats.ToString()));
             }
         }
     }
